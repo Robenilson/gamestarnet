@@ -1,47 +1,67 @@
 import React from 'react';
 
-function UserForm({ handleSubmit, nameLabel, emailLabel, passwordLabel, buttonText }) {
-  return (
-    <div className="container">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <div className="card mt-7">
+const CadastroFuncionarios = () => {
+    return (
 
-            <div className="card-header">Cadastro de Usuário</div>
-            <div className="card-body">
-              <form onSubmit={handleSubmit}>
-              
-                <div className="form-group">
-                  <label htmlFor="name">{nameLabel}</label>
-                  <input type="text" className="form-control" id="name" placeholder="Seu nome" />
-                </div>
+   
+      <div className="container">
 
-             <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <div className="row justify-content-center">
+          <div className="col-md-6">
+          <div className="card mt-5">   
+            <div className="card-header  text-center">Cadastro</div>
+            <div className="card-body ">  
+
+
+
+    
+      <form>
+          <div className="form-group row text-center">
+              <div className="col-sm-6   mb-3 "  >
+                  <label htmlFor="nome">Nome:</label>
+                  <input type="text" className="form-control" id="nome"  placeholder="Seu Nome"/>
               </div>
-                              
-                <div className="form-group">
-                  <label htmlFor="email">{emailLabel}</label>
-                  <input type="email" className="form-control" id="email" placeholder="Seu email" />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="password">{passwordLabel}</label>
-                  <input type="password" className="form-control" id="password" placeholder="Sua senha" />
-                </div>
-                <div className=" form-group">
-                <button type="submit" className="  btn btn-primary btn-block">{buttonText}</button>
-
-
-                </div>
-              </form>
-            </div>
+              <div className="col-sm-6 mb-3">
+                  <label htmlFor="sobrenome">Sobrenome:</label>
+                  <input type="text" className="form-control" id="sobrenome"  placeholder="Seu Sobrenome" />
+              </div>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+          <div className="form-group mb-4">
+              <label htmlFor="email">Email:</label>
+              <input type="email" className="form-control" id="email"   placeholder="Seu Email"/>
+          </div>
+          <div className="form-group mb-4">
+              <label htmlFor="senha">Senha:</label>
+              <input type="password" className="form-control" id="senha"   placeholder="Sua Senha"/>
+          </div>
+          <div className="form-group mb-4">
+              <label htmlFor="senha">Confirma Senha</label>
+              <input type="password" className="form-control" id="senha"   placeholder="Confirma Senha"/>
+          </div>
+          <div className="form-group  mb-4">
+              <label htmlFor="dataNascimento   mb-4">Data de Nascimento:</label>
+              <input type="date" className="form-control" id="dataNascimento" />
+          </div>
+          <div className="form-group  mb-4">
+              <label htmlFor="tipoUsuario">Tipo de Usuário:</label>
+              <select className="form-control" id="tipoUsuario">
+                  <option value="cliente">Cliente</option>
+                  <option value="vendedor">Vendedor</option>
+                  <option value="administrador">Administrador</option>
+              </select>
+          </div>
+          <div className=" form-group  text-center ">
+              <button type="submit" className="btn btn-primary text-center">Cadastrar</button>
+          </div>
+      </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+);
+};
+ 
 
-export default UserForm;
+export default CadastroFuncionarios;
