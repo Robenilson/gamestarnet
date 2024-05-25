@@ -1,0 +1,9 @@
+import axios from 'axios';
+
+const api = axios.create({
+  baseURL: 'https://api.exemplo.com', // substitua pela URL base da sua API
+  timeout: 1000, // tempo limite de requisição em milissegundos
+  headers: {'X-Custom-Header': 'foobar'} // cabeçalhos personalizados
+});
+
+export default api;

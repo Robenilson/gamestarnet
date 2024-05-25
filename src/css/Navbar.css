@@ -1,0 +1,14 @@
+/* Centraliza os itens à esquerda em telas grandes */
+@media (min-width: 992px) {
+    .custom-nav {
+      justify-content: flex-start;
+    }
+  }
+  
+  /* Ajusta a largura do container em telas grandes para centralizar os itens à esquerda */
+  @media (min-width: 992px) {
+    .container {
+      max-width: 1200px;
+    }
+  }
+
