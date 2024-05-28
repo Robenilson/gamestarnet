@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import ModalComponet from '../components/ModalComponet';
 import { Button } from 'react-bootstrap';
 import Card from '../components/Card';
+import  Menu  from'../components/menu';
 
 
 
 
 function CadastroFuncionarios() {
+
+
+  
 
     //Function Modal
     const [showModal, setShowModal] = useState(false);
@@ -54,6 +58,8 @@ function CadastroFuncionarios() {
       };
 
     return (  
+    
+    <Menu>
         <Card>  
                 <div className="card-header  text-center">Cadastro</div>
                     <div className="card-body ">  
@@ -162,6 +168,7 @@ function CadastroFuncionarios() {
       
 
  </Card>
+ </Menu>
   
     );
 };

@@ -8,8 +8,8 @@ import Login from '../src/pages/Login';
 import UserForm from '../src/pages/UserForm';
 import NewProduto from '../src/pages/NewProduto';
 import Home from '../src/pages/Home';
-import Venda from'../src/pages/vendas'
-import App from'../src/pages/App'
+import Venda from'../src/pages/vendas';
+import Caixa from'../src/pages/caixa';
 
 
 import { createBrowserRouter, RouterProvider  } from "react-router-dom"
@@ -17,16 +17,15 @@ import { createBrowserRouter, RouterProvider  } from "react-router-dom"
 
 
 const router=createBrowserRouter([
-    { element:<App />  ,
-    children:[
+   
      { path:"/",   element:<Login />},
      { path:"/Home",   element:<Home />},
       { path:"/UserForm",   element:<UserForm />},
       { path:"/venda",  element:<Venda /> },
-      { path:"/NewProduto",  element:<NewProduto /> }
-    ]}
-  ])
-
+      { path:"/NewProduto",  element:<NewProduto /> },
+      { path:"/caixa",  element:<Caixa /> }
+    
+  ]);
 
 
 

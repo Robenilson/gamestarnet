@@ -1,12 +1,19 @@
 import Card from '../components/Card';
+import  Menu  from'../components/menu';
+
+
 
 
 function NewProduto() {
 
 
+
+
+
   
     
       return (
+        <Menu>
            <Card>
                 <div className="card-header ">Novo Produto</div>
                 <div className="card-body ">
@@ -110,6 +117,7 @@ function NewProduto() {
                   </form>   
                 </div>
                 </Card>
+                </Menu>
       );
     }
     

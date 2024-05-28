@@ -2,15 +2,21 @@ import Card from '../components/Card';
 import { Button } from 'react-bootstrap';
 import React, { useState } from 'react';
 import ModalComponet from '../components/ModalComponet';
+import  Menu  from'../components/menu';
+
 
 
 function Vendas() {
+  
 const [showModal, setShowModal] = useState(false);
 const handleShowModal = () => setShowModal(true);
 const handleCloseModal = () => setShowModal(false);
 
 
     return (
+
+      <Menu>
+
        <Card>
           <form >
                 <h1 className="  text-center my-2  mb-4" >Vendas</h1>
@@ -53,6 +59,7 @@ const handleCloseModal = () => setShowModal(false);
             <button type="submit"    className="btn btn-primary text-center">Cadastrar</button>
           </div>
        </Card>
+       </Menu>
 
         
     );

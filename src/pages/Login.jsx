@@ -3,7 +3,9 @@ import  {  useState } from 'react';
 import Card from '../components/Card';
 
 
+
 function Login() {
+
 
 
 
@@ -33,12 +35,10 @@ function Login() {
                   <input type="password" className="form-control my-2  mb-4" id="password"  value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Sua senha" />
                 </div>                
               <div className="form-group text-center  m-0 mb-1">
-              <Link to="/FrogotLogin" className=" text-black text-decoration-none small">Esqueceu a Senha</Link>
               </div>             
               <div className="form-group text-center">
-
-              <Link to="/Home" className=" text-black text-decoration-none small">
-              <button    className=" btn btn-primary btn-block ">Entrar</button>
+              <Link   to="/Home" className=" text-black text-decoration-none small">
+              <button     className=" btn btn-primary btn-block ">Entrar</button>
               </Link>
                 
                </div>               
