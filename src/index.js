@@ -10,8 +10,7 @@ import NewProduto from '../src/pages/NewProduto';
 import Home from '../src/pages/Home';
 import Venda from'../src/pages/vendas';
 import Caixa from'../src/pages/caixa';
-
-
+import { AuthProvider  } from './services/AuthContext';
 import { createBrowserRouter, RouterProvider  } from "react-router-dom"
 
 
@@ -31,9 +30,11 @@ const router=createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-<React.StrictMode>
-<RouterProvider router={router}/>
-</React.StrictMode>
+<AuthProvider>
+  <React.StrictMode>
+   <RouterProvider router={router}/>
+  </React.StrictMode>
+</AuthProvider>
 
 
 

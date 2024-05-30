@@ -1,16 +1,10 @@
 import { Link } from "react-router-dom";
-import  {  useState } from 'react';
-import axios from 'axios';
 import Card from'../../components/Card';
 import { Button } from 'react-bootstrap';
-import { endPoints } from "../../static/js/endpoints";
 import { TailSpin } from 'react-loader-spinner';
 import '../../css/App.css'
-
-
-
-
-
+import React, { useState, useContext } from 'react';
+import AuthContext from '../../services/AuthContext';
 
 
 
@@ -23,30 +17,32 @@ function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const { login } = useContext(AuthContext);
 
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); 
+    
     try {
-      const response = await axios.post(endPoints.loginUser, { email, password });
-      setLoading(false); // Ocultar o loader
 
-      console.log(response.data);
+     /*const response = await axios.post('/login', {email, password });*/
 
-
-
-      
+     setLoading(true); 
+     await login(email, password);
 
 
-    } catch (err) {
-      setError(' A senha ou e-mail incorretos. ');
+
+    } catch (error) {
+      setError('Erro ao fazer login. Verifique suas credenciais e tente novamente.');
       setEmail('')
       setPassword('')
 
-      setLoading(false); 
-    }
+      setLoading(false);
+  }
+    
+    
+   
   };
 
 
@@ -102,13 +98,7 @@ function Login() {
               
               
                
-               
-               
-               
-               
-               
-               
-            
+  
                 <Link   to="/Home" className=" text-black text-decoration-none small">
 
               </Link>
