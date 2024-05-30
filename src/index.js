@@ -4,7 +4,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'jquery';
-import Login from '../src/pages/Login';
+import Login from '../src/pages/Login/Login';
 import UserForm from '../src/pages/UserForm';
 import NewProduto from '../src/pages/NewProduto';
 import Home from '../src/pages/Home';
